@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 ################################################################################
-# General bash utility
+# General bash utility functions
 ################################################################################
 
+## alias to 'echo' to stderr
 function echoerr() {
 	printf "%s\n" "$*" >&2;
 }
@@ -25,6 +26,7 @@ function scriptdir(){
 # Declare global git-utils root, to be exported at the end of the file
 ################################################################################
 
+# Will be exported at the end of the script!
 GIT_UTILS_ROOT=$(scriptdir)
 
 ################################################################################
@@ -306,8 +308,8 @@ function git_poach() {
 # export
 ################################################################################
 
-#export -f echoerr
-#export -f currentdirname
+#export -f echoerr               # won't export now. may belong to a bash lib.
+#export -f currentdirname        # won't export now. may belong to a bash lib.
 
 
 export GIT_UTILS_ROOT

@@ -1,10 +1,10 @@
 # git-utils
 
-git related convenience functions. In bash. 
+git related convenience functions. In bash because I like suffering. License: GPL3
 
 ## Install
 
-Just source `got-utils.sh` from your rc or profile. An environmental variable `GIT_UTILS_ROOT` points to the script dir and function names are exported (`export -f function_name`).
+Source `git-utils.sh` from rc or profile (whatever works for non-interactive sessions). An environmental variable `GIT_UTILS_ROOT` points to the script dir and function names are exported (`export -f function_name`).
 
 ## Functions
 
@@ -30,7 +30,7 @@ Overwrite history squashing repo to one commit
 
 Makes a remote repo in bitbucket or github.
 
-* `git_mkremote -n <name> -u <username> -r <'bitbucket'|'github'> -a <'private'|'public'>"`
+* `git_mkremote -n <name> -u <username> -r <bitbucket|github> -a <private|public>`
 
 Aside form creating the remote repo, also sets the environmental variable `git_mkremote_push_url` as a side effect.
 
@@ -38,7 +38,7 @@ Aside form creating the remote repo, also sets the environmental variable `git_m
 
 `git-poach` 1. clones a repo locally, 2) unsets its remotes and 3) squashes its history. Useful as a first stem to "instantiate" a template repository.
 
-* `git_poach -t <template> -n <name> [-b <branch>] -o [-m <commit msg>] -h`
+* `git_poach -t <template> -n <name> [-b <branch>] -o [-m <"commit msg">] -h`
 
 
 
