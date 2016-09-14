@@ -4,7 +4,7 @@
 # General bash utility functions
 ################################################################################
 
-## alias to 'echo' to stderr
+## 'echo' alias to stderr
 function echoerr() {
 	printf "%s\n" "$*" >&2;
 }
@@ -187,9 +187,6 @@ function git_mkremote() {
 
 ################################################################################
 # poach: An evil version of fork.
-#
-# Author:  Dudu Meireles
-# License: GPL3
 ################################################################################
 
 function git_poach() {
