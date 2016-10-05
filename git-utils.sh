@@ -88,6 +88,32 @@ function git_squash_commits() {
 }
 
 ################################################################################
+# Run Garbage Collection on ALL git repos under ~
+################################################################################
+
+function git_gc_all_repos() {
+
+    local __start="$(pwd)" 
+    local __repos="$(find $__start -name .git -type d -prune)"
+
+    for item in ${__repos[*]}
+        do
+            printf "Processing: $(dirname "$item")"
+            printf "\n"
+            cd "$(dirname "$item")"
+            git gc --aggressive --prune=now
+            printf "\n"
+			cd "$__start"
+        done
+cd "$__start"
+
+}
+
+
+
+
+
+################################################################################
 # Create remotes
 ################################################################################
 
