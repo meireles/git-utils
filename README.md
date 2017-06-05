@@ -1,6 +1,8 @@
 # git-utils
 
-git related convenience functions. In bash because I like suffering. License: GPL3
+git related convenience functions, written in bash because I like pain and suffering.
+
+License: GPL3
 
 ## Install
 
